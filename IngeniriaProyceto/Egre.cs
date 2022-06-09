@@ -47,5 +47,13 @@ namespace IngeniriaProyceto
             PanelContenido.Controls.Clear();
             PanelContenido.Controls.Add(ucactual);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ucactual = new UCRefacciones();
+            button1.BackColor = Color.FromArgb(251, 191, 0);
+            PanelContenido.Controls.Clear();
+            PanelContenido.Controls.Add(ucactual);
+        }
     }
 }
