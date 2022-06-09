@@ -43,8 +43,32 @@ namespace IngeniriaProyceto
 
         private void BtnLogin_Click_1(object sender, EventArgs e)
         {
-            new Egre().Show();
-            this.Hide();
+            try
+            {
+                conexion.Open();
+                string cm = ("SELECT Usuario, PasswordUser FROM  Usuarios WHERE Usuario='"+ txtUsuario.Text+"' AND PasswordUser='"+txtPassword.Text+"'");
+                 SqlCommand comando = new SqlCommand(cm, conexion);
+                SqlDataReader dr = comando.ExecuteReader();
+                if(dr.Read())
+                {
+                    new Egre().Show();
+                    this.Hide();
+                    MessageBox.Show("Bienvenido....");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no encontrado o contraseña incorrecta....");
+                }
+
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("No se encontro el usuario en el sistema....\n"+ ex);
+            }
+            finally
+            {
+                conexion.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
