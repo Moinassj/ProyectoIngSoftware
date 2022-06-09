@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
@@ -52,25 +52,26 @@
             this.linkLabel2.TabIndex = 29;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "¿Haz olvidado tu contraseña?";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(301, 420);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 20);
+            this.checkBox2.Size = new System.Drawing.Size(108, 20);
             this.checkBox2.TabIndex = 28;
-            this.checkBox2.Text = "Recurdame";
+            this.checkBox2.Text = "Recuerdame";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(447, 346);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 22);
-            this.textBox1.TabIndex = 27;
+            this.txtPassword.Location = new System.Drawing.Point(447, 346);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(283, 22);
+            this.txtPassword.TabIndex = 27;
             // 
             // label4
             // 
@@ -82,13 +83,13 @@
             this.label4.Size = new System.Drawing.Size(0, 25);
             this.label4.TabIndex = 26;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(447, 257);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 22);
-            this.textBox2.TabIndex = 25;
+            this.txtUsuario.Location = new System.Drawing.Point(447, 257);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(283, 22);
+            this.txtUsuario.TabIndex = 25;
             // 
             // label5
             // 
@@ -121,7 +122,7 @@
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.Location = new System.Drawing.Point(599, 478);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(240, 49);
             this.BtnLogin.TabIndex = 22;
@@ -139,18 +140,19 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(228, 478);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 49);
             this.button2.TabIndex = 21;
             this.button2.Text = "Registarse";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(447, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,15 +166,15 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Ingenieria De Software";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -185,9 +187,9 @@
 
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnLogin;

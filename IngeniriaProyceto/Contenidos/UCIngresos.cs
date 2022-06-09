@@ -13,8 +13,7 @@ namespace IngeniriaProyceto.Contenidos
 {
     public partial class UCIngresos : UserControl
     {
-        //Conexion a la base de datos (Para poder utilizarlo en su pc cambio el server por el suyo de sql server)
-        
+        //Conexion a la base de datos (Para poder utilizarlo en su pc cambio el server por el suyo de sql server)   
         SqlConnection conexion = new SqlConnection("server = localhost\\SQLEXPRESS; database=ProyectoVL; integrated security=true");
         int rowModifcar;
         public UCIngresos()
@@ -25,7 +24,6 @@ namespace IngeniriaProyceto.Contenidos
             {
                 conexion.Open();
                 TablaDatos.DataSource = MuestraDatos();
-                MessageBox.Show("Conexion exitosa a la Base de Datos");
             }
             catch
             {

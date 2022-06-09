@@ -6,8 +6,7 @@ CREATE TABLE Usuarios (
 	Id_Usuario INT IDENTITY(1,1) PRIMARY KEY,
 	Usuario VARCHAR(50),
 	PasswordUser VARCHAR(50),
-	Nombre VARCHAR(100),
-	FechaNacimiento DATE,
+	Nombre VARCHAR(100
 )
 
 /* Tabla de Automovil */
