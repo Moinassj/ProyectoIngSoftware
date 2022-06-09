@@ -1,0 +1,112 @@
+CREATE DATABASE ProyectoVL;
+USE ProyectoVL;
+
+/* Tabla de Usuarios */
+CREATE TABLE Usuarios (
+	Id_Usuario INT IDENTITY(1,1) PRIMARY KEY,
+	Usuario VARCHAR(50),
+	PasswordUser VARCHAR(50),
+	Nombre VARCHAR(100),
+	FechaNacimiento DATE,
+)
+
+/* Tabla de Automovil */
+CREATE TABLE Automovil (
+	Id_Automovil INT IDENTITY(1,1) PRIMARY KEY,
+	Marca VARCHAR(50),
+	Modelo VARCHAR(50),
+	Serie VARCHAR(100)
+)
+
+/* Tabla de Placas */
+CREATE TABLE Placas (
+	Id_Placas INT IDENTITY(1,1) PRIMARY KEY,
+	Placa VARCHAR(15),
+	ActivasDesde DATE,
+	ActivasHasta DATE,
+)
+
+/* Tabla de Egresos */
+CREATE TABLE Egresos (
+	Id_Egresos INT IDENTITY(1,1) PRIMARY KEY,
+	FolioFiscal_E VARCHAR(100),
+	Feche_E DATE,
+	Folio_E VARCHAR(100),
+	NombreReceptor VARCHAR(100),
+	Subtotal_E FLOAT,
+	Iva_Ocho_E FLOAT,
+)
+
+/* Tabla de Ingresos */
+CREATE TABLE Ingresos (
+	Id_Ingresos INT IDENTITY(1,1) PRIMARY KEY,
+	FolioFiscal_I VARCHAR(100),
+	Feche_I DATE,
+	Folio_I VARCHAR(100),
+	NombreReceptor VARCHAR(100),
+	Subtotal_I FLOAT,
+	Iva_Ocho_E FLOAT,
+	Iva_Dieciseis_E FLOAT,
+)
+
+/* Tabla de Contaminantes */
+CREATE TABLE Contaminantes (
+	Id_Contaminantes INT IDENTITY(1,1) PRIMARY KEY,
+	Fecha_Realizacion DATE,
+	Fecha_Vencimiento DATE,
+)
+
+/* Tabla de Mecanica */
+CREATE TABLE Mecanica (
+	Id_Mecanica INT IDENTITY(1,1) PRIMARY KEY,
+	Fecha_Realizacion DATE,
+	Fecha_Vencimiento DATE,
+)
+
+/* Tabla de Aseguranza */
+CREATE TABLE Aseguranza (
+	Id_Aseguranza INT IDENTITY(1,1) PRIMARY KEY,
+	Fecha_Realizacion DATE,
+	Fecha_Vencimiento DATE,
+)
+
+/* Tabla de Rendimiento */
+CREATE TABLE Rendimiento (
+	Id_Rendimiento INT IDENTITY(1,1) PRIMARY KEY,
+	Km_Recorridos FLOAT,
+	Litros FLOAT,
+	Consumo_Promedio FLOAT,
+	Precio FLOAT,
+)
+
+/* Tabla de Jornada */
+CREATE TABLE Jornada (
+	Id_Jornada INT IDENTITY(1,1) PRIMARY KEY,
+	Id_Automovil int FOREIGN KEY REFERENCES Automovil(Id_Automovil),
+	Id_Usuario int FOREIGN KEY REFERENCES Usuarios(Id_Usuario),
+	Presupuesto_Ini FLOAT,
+	Presupuesto_Fin FLOAT,
+)
+
+/* Tabla de Refacciones */
+CREATE TABLE Refacciones (
+	Id_Refacciones INT IDENTITY(1,1) PRIMARY KEY,
+	NombrePieza VARCHAR(100),
+	Modelo VARCHAR(100),
+	YearPieza INT,
+	NombreReceptorPieza VARCHAR(100),
+	Existencia INT,
+	Id_Automovil int FOREIGN KEY REFERENCES Automovil(Id_Automovil)
+)
+
+/* Tabla de Taller */
+CREATE TABLE Taller (
+	Id_Taller INT IDENTITY(1,1) PRIMARY KEY,
+	Nombre VARCHAR(100),
+	Direccion VARCHAR(100),
+	Cotizacion FLOAT,
+	Estatus VARCHAR(100),
+	Fecha_Ingreso DATE,
+	Fecha_Salida DATE,
+	DescripcionExtra NVARCHAR,
+)
