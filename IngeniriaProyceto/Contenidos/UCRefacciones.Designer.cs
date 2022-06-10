@@ -52,10 +52,12 @@
             this.TablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDatos.Location = new System.Drawing.Point(33, 297);
             this.TablaDatos.Name = "TablaDatos";
+            this.TablaDatos.ReadOnly = true;
             this.TablaDatos.RowHeadersWidth = 51;
             this.TablaDatos.RowTemplate.Height = 24;
             this.TablaDatos.Size = new System.Drawing.Size(734, 180);
             this.TablaDatos.TabIndex = 39;
+            this.TablaDatos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaDatos_RowHeaderMouseClick);
             // 
             // btnEliminar
             // 
