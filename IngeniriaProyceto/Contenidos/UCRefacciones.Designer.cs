@@ -28,68 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.TablaDatos = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtGuardar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombreReceptor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombrePieza = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtExistencia = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // TablaDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 297);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(734, 180);
-            this.dataGridView1.TabIndex = 39;
+            this.TablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaDatos.Location = new System.Drawing.Point(33, 297);
+            this.TablaDatos.Name = "TablaDatos";
+            this.TablaDatos.RowHeadersWidth = 51;
+            this.TablaDatos.RowTemplate.Height = 24;
+            this.TablaDatos.Size = new System.Drawing.Size(734, 180);
+            this.TablaDatos.TabIndex = 39;
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(402, 211);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(614, 161);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 38;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button2
+            // txtGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(303, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtGuardar.Location = new System.Drawing.Point(515, 161);
+            this.txtGuardar.Name = "txtGuardar";
+            this.txtGuardar.Size = new System.Drawing.Size(75, 23);
+            this.txtGuardar.TabIndex = 37;
+            this.txtGuardar.Text = "Guardar";
+            this.txtGuardar.UseVisualStyleBackColor = true;
+            this.txtGuardar.Click += new System.EventHandler(this.txtGuardar_Click);
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(502, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(502, 268);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox8
+            // txtBuscar
             // 
-            this.textBox8.Location = new System.Drawing.Point(33, 269);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(450, 22);
-            this.textBox8.TabIndex = 35;
+            this.txtBuscar.Location = new System.Drawing.Point(33, 269);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(450, 22);
+            this.txtBuscar.TabIndex = 35;
             // 
             // label6
             // 
@@ -101,12 +104,12 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Existencia";
             // 
-            // textBox4
+            // txtNombreReceptor
             // 
-            this.textBox4.Location = new System.Drawing.Point(33, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(339, 22);
-            this.textBox4.TabIndex = 28;
+            this.txtNombreReceptor.Location = new System.Drawing.Point(33, 161);
+            this.txtNombreReceptor.Name = "txtNombreReceptor";
+            this.txtNombreReceptor.Size = new System.Drawing.Size(339, 22);
+            this.txtNombreReceptor.TabIndex = 28;
             // 
             // label5
             // 
@@ -118,12 +121,12 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Nombre del receptor:";
             // 
-            // textBox3
+            // txtYear
             // 
-            this.textBox3.Location = new System.Drawing.Point(611, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(78, 22);
-            this.textBox3.TabIndex = 26;
+            this.txtYear.Location = new System.Drawing.Point(611, 95);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(78, 22);
+            this.txtYear.TabIndex = 26;
             // 
             // label4
             // 
@@ -135,12 +138,12 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Año:";
             // 
-            // textBox2
+            // txtModelo
             // 
-            this.textBox2.Location = new System.Drawing.Point(395, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 22);
-            this.textBox2.TabIndex = 24;
+            this.txtModelo.Location = new System.Drawing.Point(395, 95);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(156, 22);
+            this.txtModelo.TabIndex = 24;
             // 
             // label3
             // 
@@ -152,12 +155,12 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Modelo:";
             // 
-            // textBox1
+            // txtNombrePieza
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 22);
-            this.textBox1.TabIndex = 22;
+            this.txtNombrePieza.Location = new System.Drawing.Point(33, 95);
+            this.txtNombrePieza.Name = "txtNombrePieza";
+            this.txtNombrePieza.Size = new System.Drawing.Size(265, 22);
+            this.txtNombrePieza.TabIndex = 22;
             // 
             // label2
             // 
@@ -180,36 +183,36 @@
             this.label1.Text = "Refacciones";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox5
+            // txtExistencia
             // 
-            this.textBox5.Location = new System.Drawing.Point(395, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(78, 22);
-            this.textBox5.TabIndex = 40;
+            this.txtExistencia.Location = new System.Drawing.Point(395, 161);
+            this.txtExistencia.Name = "txtExistencia";
+            this.txtExistencia.Size = new System.Drawing.Size(78, 22);
+            this.txtExistencia.TabIndex = 40;
             // 
             // UCRefacciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtExistencia);
+            this.Controls.Add(this.TablaDatos);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.txtGuardar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNombreReceptor);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombrePieza);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCRefacciones";
             this.Size = new System.Drawing.Size(835, 495);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,21 +220,21 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DataGridView TablaDatos;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button txtGuardar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombreReceptor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombrePieza;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtExistencia;
     }
 }
